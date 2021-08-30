@@ -1,3 +1,22 @@
+# Instalação do projeto executar o seguinte comando dentro da pasta sell2brazil
+composer install
+
+# Criar o banco e migrar as tabelas
+php artisan mysql:createdb sell2brazil
+php artisan migrate:install
+php artisan migrate
+
+# Executar o teste unitário, executar o comando dentro da pasta sell2brazil
+vendor\bin\phpunit
+
+
+##### Se ocorrer algum erro executar os seguintes comandos.
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
